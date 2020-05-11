@@ -8,9 +8,6 @@ const p = path.join(
 );
 
 const getEmployeeFromFile = cb => {
-    console.log(path.dirname(process.mainModule.filename));
-    console.log(__dirname);
-    console.log(p);
     fs.readFile(p, (err, fileContent) => {
         if (err) {
             return cb([]);
