@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const PORT = process.env.PORT || 8080;
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -18,4 +20,6 @@ app.use(cmsRoutes);
 app.use(adminRoutes);
 app.use(errorController.get404);
 
-app.listen(80);
+app.listen(PORT, () => {
+    console.log(`Listening on ${PORT}`)
+});
