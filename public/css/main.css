@@ -218,6 +218,13 @@ th, td{
     font-size: 18px;
 }
 
+.td-hide {
+    max-width: 70px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+}
+
 .table-link-delete {
     color: #c24545;
 }
@@ -243,6 +250,7 @@ th, td{
     color: #c24545;
     font-size: 18px;
     cursor: pointer;
+    height: 25px;
 }
 /* 
 36pt = 47.8px
