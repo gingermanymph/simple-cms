@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #f3f3f3;
+}
+
+label {
+    margin: 15px 0;
+    color: #0c789f;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    color: #0c789f;
+}
+
+hr{
+    background: #0c789f;
+    width: 100%;
+    height: 2px;
+    border: none;
+    margin-top: 7px;
+}
+
+button{
+    color: #0c789f;
+    font-size: 23px;
+    border: solid 1px #0c789f;
+    border-radius: 1px;
+    background: #f3f3f3;
+    width: 111px;
+    height: 35px;
+}
+
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: #0c789f;
+    display: flex;
+}
+
+.header-link {
+    width: 100%;
+    margin: 0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    font-size: 39px;
+}
+
+.header-logo:hover::after{
+    opacity: 1;
+}
+.header-logo::after{
+    opacity: 0;
+    content: ' 삼성';
+}
+.header-logout {
+    font-size: 18px;
+}
+
+.main-form {
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    width: 646px;
+    height: 345px;
+    border: solid 2px #0c789f;
+    border-radius: 2px;
+}
+
+.form-login{
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login p{
+    color: #0c789f;
+    font-size: 47.8px;
+    padding-bottom: 53px;
+}
+
+.form-login input{
+    margin-bottom: 19px;
+    width: 170px;
+    height: 26px;
+    border: solid 1px #0c789f;
+    border-radius: 1px;
+    font-size: 21px;
+    color: #0c789f;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+.form-login input::placeholder{
+    text-align: center;
+    color: #0c789f;
+}
+
+.form-login button{
+    width: 172px;
+    height: 28px;
+    color: white;
+    background-color: #0c789f;
+    border-radius: 1px;
+    border: none;
+    font-size: 21px;
+}
+
+.nav-menu{
+    background: #2e8aac;
+    display: flex;
+    padding: 30px 0;
+    max-width: 196px;
+    width: 100%;
+    height: 85vh;
+    
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list li {
+    padding: 15px 18px 15px 30px;
+    width: 100%;
+}
+
+.nav-list-item {
+    transition: background .2s linear;
+}
+
+.nav-list-item:hover{
+    background: #62a7c1;
+}
+
+.nav-list-item.active {
+    background: #62a7c1;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.container {
+    margin: 26px 30px;
+    width: 100%;
+}
+
+.upload-form input{
+    display: inline-block;
+}
+
+input[type="file"] {
+    color: #0c789f;
+    font-size: 23px;
+    display: inline-block;
+    padding: 4px 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* employee styles */
+
+.employee-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-form input{
+    /* margin-bottom: 19px; */
+    width: 170px;
+    height: 26px;
+    border: solid 1px #0c789f;
+    border-radius: 1px;
+    font-size: 18px;
+    color: #0c789f;
+    /* text-align: center; */
+    background-color: #f3f3f3;
+}
+
+.employee-form button{
+    width: 200px;
+    height: 28px;
+    font-size: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 1px;
+    text-align: center;
+    font-size: 21px;
+
+}
+
+table, th, td{
+    border: solid 1px #0c789f;
+    color: #0c789f;
+}
+
+th, td{
+    font-size: 18px;
+}
+
+.table-link-delete {
+    color: #c24545;
+}
+
+.table-link-edit {
+    color: #0c789f
+}
+
+/* Admin form */
+.admin-form {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-form a{
+    margin: 10px 0;
+    color: #0c789f;
+}
+/* 
+36pt = 47.8px
+30pt = 39.8px
+24px = 31.875534px
+18pt = 23.90665px
+16pt = 21.250356px
+*/

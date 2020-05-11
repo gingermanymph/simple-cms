@@ -1,0 +1,63 @@
+<%- include('includes/head.ejs') %>
+
+<div class="wrapper">
+
+    <%- include('includes/nav-menu.ejs') %>
+
+    <main class="container">
+        <h1 class="container-title">Employees</h1>
+        <hr>
+        <div class="employee-content">
+            <label for="employee-form"><% if (editing) { %>Edit Employee<%} else {%>Add new employee<% } %></label>
+            <form id="employee-form" class="employee-form" action="<% if (editing) { %>/edit-employee<% } else { %>/employees<% } %>" method="post">
+                <input type="text" name="firstName" id="firstName" placeholder="First name"
+                    value="<% if(editing) { %><%= employee.firstName %><% } %>">
+                <input type="text" name="lastName" id="lastName" placeholder="Last name"
+                    value="<% if(editing) { %><%= employee.lastName %><% } %>">
+                <input type="text" name="email" id="email" placeholder="Email"
+                    value="<% if(editing) { %><%= employee.email %><% } %>">
+                <input type="text" name="tin" id="tin" placeholder="TIN"
+                    value="<% if(editing) { %><%= employee.tin %><% } %>">
+                <% if (editing) { %>
+                <input type="hidden" name="employeeId" id="employeeId" value="<% if(editing) { %><%= employee.id %><% } %>">
+                <% } %>
+                <button type="submit"><% if (editing) { %>Update Employee<% } else { %>Add Employee<% } %></button>
+            </form>
+            <label for="employee-list">List of employees</label>
+            <table id="emplooye-list">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Email</th>
+                        <th>TIN</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let employee of employees) { %>
+                    <tr>
+                        <td><%= employee.id %></td>
+                        <td><%= employee.firstName %></td>
+                        <td><%= employee.lastName %></td>
+                        <td><%= employee.email %></td>
+                        <td><%= employee.tin %></td>
+                        <td>
+                            <a class="table-link-edit" href="/edit-employee/<%= employee.id %>?edit=true">Edit</a>
+                            <form action="/delete-employee" method="post">
+                                <input type="hidden" name="employeeId" value="<%= employee.id %>">
+                                <button type="submit">Delete</button>
+                            </form>
+                            <!-- <a class="table-link-delete"
+                                href="javascript:if(confirm('Do you want to delete this item? \n<%= employee.firstName %>\x20<%= employee.lastName %>\n<%= employee.email %>\n<%= employee.tin %>')){window.location = '/delete/id'}">Delete</a> -->
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<%- include('includes/end.ejs') %>

@@ -1,0 +1,15 @@
+<%- include('includes/head.ejs') %>
+<div class="wrapper">
+    <%- include('includes/nav-menu.ejs') %>
+    <main class="container">
+        <h1 class="container-title">Upload pdf</h1>
+        <hr>
+        <div class="upload-form">
+            <form action="/uploads" method="post">
+                <input type="file" name="upload-pdf" id="upload-pdf">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </main>
+</div>
+<%- include('includes/end.ejs') %>
